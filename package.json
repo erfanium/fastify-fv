@@ -1,0 +1,57 @@
+{
+   "name": "fastify-fv",
+   "version": "0.1.0",
+   "description": "Fastify plugin to support fastest-validator",
+   "main": "fastest-validator.js",
+   "scripts": {
+      "test": "standard && tap test/**/*.test.js && tsd",
+      "test-ci": "tap test/**/*.test.js --coverage-report=html",
+      "lint": "standard | snazzy",
+      "lint-ci": "standard",
+      "codecov": "codecov",
+      "typescript": "tsd"
+   },
+   "precommit": [
+      "lint",
+      "test"
+   ],
+   "dependencies": {
+      "fastify-plugin": "^3.0.0"
+   },
+   "devDependencies": {
+      "@types/node": "^14.14.6",
+      "codecov": "^3.8.1",
+      "eslint": "^7.13.0",
+      "eslint-config-standard": "^16.0.1",
+      "eslint-import-resolver-node": "^0.3.4",
+      "eslint-plugin-import": "^2.22.1",
+      "eslint-plugin-node": "^11.1.0",
+      "eslint-plugin-promise": "^4.2.1",
+      "eslint-plugin-standard": "^4.0.2",
+      "fastest-validator": "^1.8.0",
+      "fastify": "^3.7.0",
+      "pre-commit": "^1.2.2",
+      "snazzy": "^9.0.0",
+      "standard": "^16.0.1",
+      "tap": "^14.10.8",
+      "tsd": "^0.13.1",
+      "typescript": "^4.0.5"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/erfanium/fastify-fv.git"
+   },
+   "keywords": [
+      "fastify",
+      "fastest-validator",
+      "plugin",
+      "validator"
+   ],
+   "author": "Erfanium <erfanshield@outlook.com>",
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/erfanium/fastify-fv/issues"
+   },
+   "homepage": "https://github.com/erfanium/fastify-fv#readme",
+   "types": "fastest-validator.d.ts"
+}
