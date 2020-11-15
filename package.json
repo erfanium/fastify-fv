@@ -1,6 +1,6 @@
 {
    "name": "fastify-fv",
-   "version": "0.1.0",
+   "version": "0.2.0",
    "description": "Fastify plugin to support fastest-validator",
    "main": "fastest-validator.js",
    "scripts": {
