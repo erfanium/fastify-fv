@@ -62,7 +62,7 @@ test('generate validator and validate valid params', (t) => {
 })
 
 test('generate validator and validate invalid params and format errors', (t) => {
-  t.plan(4)
+  t.plan(3)
 
   const compiler = generateValidatorCompiler(fv)
   const schema = {
@@ -76,7 +76,6 @@ test('generate validator and validate invalid params and format errors', (t) => 
   const validator = compiler({ schema })
   const result = validator({ foo: 'a', bar: 5 })
   t.isA(result, Object)
-  t.isA(result.error, Array)
-  t.isA(result.error[0], Object)
-  t.strictEqual(typeof result.error[0].message, 'string')
+  t.isA(result.error, Error)
+  t.strictEqual(result.error.statusCode, 422)
 })

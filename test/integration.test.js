@@ -71,6 +71,6 @@ test('validate valid invalid', async (t) => {
     body: { name: 'erfan', age: 19, category: 'dev' }
   })
 
-  t.equal(result.statusCode, 400)
-  t.deepEqual(JSON.parse(result.body), { statusCode: 400, error: 'Bad Request', message: "body The 'category' field must be an array." })
+  t.equal(result.statusCode, 422)
+  t.deepEqual(JSON.parse(result.body), { statusCode: 422, error: 'Unprocessable Entity', message: "The 'category' field must be an array." })
 })
