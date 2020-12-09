@@ -12,7 +12,7 @@ const fvPlugin = require('fastify-fv')
 const app = fastify()
 const fv = new FV()
 
-app.register(fastifyFV, fv) // register the plugin
+app.register(fvPlugin, fv) // register the plugin
 
 app.route({
   method: 'POST',
